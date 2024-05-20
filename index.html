@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta And Title Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ahmed Harraz">
+  <link rel="icon" href="./assets/bookmark.png">
+  <title>Bookmark</title>
+
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Fontawesome Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main>
+    <div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+      <h1 class="bookmark-head-title py-2 position-relative">Bookmarker</h1>
+      <div
+        class="bookmark-form my-4 p-3 w-100 mt-5 d-flex flex-column justify-content-center align-items-center gap-4 ">
+        <h2 class="mt-2">
+          <i class="fas fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fas fa-bookmark"></i>
+        </h2>
+
+        <div class="site-name w-100  ">
+          <label for="userSite" class="form-label fw-semibold ">
+            <i class="fa-solid fa-book pe-2"></i>
+            Site Name
+          </label>
+          <input type="text" oninput="nameSiteCheck()" class="form-control shadow-warning" id="userSite"
+            placeholder="Bookmark Name">
+        </div>
+
+        <div class="site-link w-100  ">
+          <label for="userLink" class="form-label fw-semibold ">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </label>
+          <input type="url" oninput="linkSiteCheck()" class="form-control shadow-warning" id="userLink"
+            placeholder="Website URL">
+        </div>
+
+        <button onclick="addSite()" type="button" class="btn px-5 btn-submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <table class="table mt-2 text-center bg-light">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+
+
+
+  <div id="errorContainer">
+
+  </div>
+
+
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
