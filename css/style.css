@@ -201,3 +201,10 @@ input::placeholder {
   --bs-btn-hover-bg: #d30820;
   --bs-btn-hover-border-color: #ba081d;
 }
+
+/* Media Query */
+@media (max-width: 450px) {
+  .bookmark-form h2 {
+    font-size: 21px;
+  }
+}
